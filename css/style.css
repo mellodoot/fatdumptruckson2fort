@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap);
+
+:root {
+    --pride1: #ff0018;
+    --pride2: #ffa52c;
+    --pride3: #ffff41;
+    --pride4: #008018;
+    --pride5: #0000f9;
+    --pride6: #88007d;
+
+    --col1: #ff9260;
+    --col2: #c3fd77;
+    --col3: #5fe5f7;
+    --col4: #fd63c2;
+
+    --pride: -webkit-linear-gradient(0deg, var(--col1), var(--col2), var(--col3), var(--col4), var(--col1));
+    --bgsize: 30rem;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #111e;
+    color: #eee;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+div#background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: -100;
+}
+#background video {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+div.container {
+    display: flex;
+    
+    margin: auto;
+    padding: 1rem;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: .06rem;
+}
+
+.pride {
+    background: var(--pride);
+    background-size: var(--bgsize);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bg-carousel 2s linear infinite;
+}
+
+a, a:visited {
+    color: var(--col3);
+    text-decoration: none;
+    animation: pastel-loop 3s linear infinite;
+}
+
+footer {
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #0002;
+}
+
+@keyframes pride-loop {
+    0% { color: inherit; }
+    14.3% { color: var(--pride1); }
+    28.6% { color: var(--pride2); }
+    42.9% { color: var(--pride3); }
+    57.1% { color: var(--pride4); }
+    71.4% { color: var(--pride5); }
+    85.7% { color: var(--pride6); }
+    100% { color: inherit; }
+}
+
+@keyframes pastel-loop {
+    0% { color: var(--col1); }
+    25% { color: var(--col2); }
+    50% { color: var(--col3); }
+    75% { color: var(--col4); }
+    100% { color: var(--col1); }
+}
+
+@keyframes bg-carousel {
+    0% { background-position-x: 0; }
+    100% { background-position-x: var(--bgsize) }
+}
