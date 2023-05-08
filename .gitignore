@@ -1,1 +1,4 @@
 **/.DS_Store
+*.code-workspace
+certs/
+node_modules/

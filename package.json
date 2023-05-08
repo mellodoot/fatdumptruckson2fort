@@ -1,0 +1,29 @@
+{
+    "name": "fatdumptrucks",
+    "version": "1.0.0",
+    "description": "dopey source code for a dopey domain I paid real world money to own",
+    "main": "index.js",
+    "public": false,
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "./static/*"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mellodoot/fatdumptruckson2fort.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mellodoot/fatdumptruckson2fort/issues"
+    },
+    "homepage": "https://github.com/mellodoot/fatdumptruckson2fort#readme",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
